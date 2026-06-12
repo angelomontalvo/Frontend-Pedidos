@@ -1,0 +1,52 @@
+<header class="bg-red-700 border-b-4 border-yellow-400 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">🍕</div>
+
+      <div>
+        <h1 class="text-white font-bold text-xl leading-none">Pizza Delivery</h1>
+
+        <p class="text-yellow-300 text-xs">Delicioso y rápido</p>
+      </div>
+    </div>
+
+    <!-- Menú -->
+    <nav class="hidden md:flex items-center gap-2">
+      <a
+        routerLink="/"
+        class="bg-white text-red-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition"
+      >
+        Productos
+      </a>
+
+      <a
+        routerLink="/carrito"
+        class="text-white font-medium px-4 py-2 rounded-lg hover:bg-red-600 transition"
+      >
+        Carrito
+      </a>
+
+      <a
+        routerLink="/compras"
+        class="text-white font-medium px-4 py-2 rounded-lg hover:bg-red-600 transition"
+      >
+        Mis Compras
+      </a>
+
+      <a
+        routerLink="/configuracion"
+        class="text-white font-medium px-4 py-2 rounded-lg hover:bg-red-600 transition"
+      >
+        Configuración
+      </a>
+    </nav>
+
+    <!-- Login -->
+    <button
+      class="bg-yellow-400 hover:bg-yellow-300 text-red-800 font-semibold px-5 py-2 rounded-lg transition"
+    >
+      Ingresar
+    </button>
+  </div>
+</header>
