@@ -15,28 +15,57 @@
     <nav class="hidden md:flex items-center gap-2">
       <a
         routerLink="/"
-        class="bg-white text-red-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition"
+        routerLinkActive
+        #rlaProductos="routerLinkActive"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [class.bg-white]="rlaProductos.isActive"
+        [class.text-red-700]="rlaProductos.isActive"
+        [class.hover:bg-gray-100]="rlaProductos.isActive"
+        [class.text-white]="!rlaProductos.isActive"
+        [class.hover:bg-red-600]="!rlaProductos.isActive"
+        class="font-medium px-4 py-2 rounded-lg transition"
       >
         Productos
       </a>
 
       <a
         routerLink="/carrito"
-        class="text-white font-medium px-4 py-2 rounded-lg hover:bg-red-600 transition"
+        routerLinkActive
+        #rlaCarrito="routerLinkActive"
+        [class.bg-white]="rlaCarrito.isActive"
+        [class.text-red-700]="rlaCarrito.isActive"
+        [class.hover:bg-gray-100]="rlaCarrito.isActive"
+        [class.text-white]="!rlaCarrito.isActive"
+        [class.hover:bg-red-600]="!rlaCarrito.isActive"
+        class="font-medium px-4 py-2 rounded-lg transition"
       >
         Carrito
       </a>
 
       <a
         routerLink="/compras"
-        class="text-white font-medium px-4 py-2 rounded-lg hover:bg-red-600 transition"
+        routerLinkActive
+        #rlaCompras="routerLinkActive"
+        [class.bg-white]="rlaCompras.isActive"
+        [class.text-red-700]="rlaCompras.isActive"
+        [class.hover:bg-gray-100]="rlaCompras.isActive"
+        [class.text-white]="!rlaCompras.isActive"
+        [class.hover:bg-red-600]="!rlaCompras.isActive"
+        class="font-medium px-4 py-2 rounded-lg transition"
       >
         Mis Compras
       </a>
 
       <a
         routerLink="/configuracion"
-        class="text-white font-medium px-4 py-2 rounded-lg hover:bg-red-600 transition"
+        routerLinkActive
+        #rlaConfig="routerLinkActive"
+        [class.bg-white]="rlaConfig.isActive"
+        [class.text-red-700]="rlaConfig.isActive"
+        [class.hover:bg-gray-100]="rlaConfig.isActive"
+        [class.text-white]="!rlaConfig.isActive"
+        [class.hover:bg-red-600]="!rlaConfig.isActive"
+        class="font-medium px-4 py-2 rounded-lg transition"
       >
         Configuración
       </a>
